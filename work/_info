@@ -1,0 +1,183 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+vAHB_master
+Z0 !s110 1720794693
+!i10b 1
+!s100 A8MVmJX;nbV?:h[3G:1:>1
+I9cZ[ObgAMA45h=6_NkjWb2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/HP/OneDrive/Desktop/project_Bridge
+w1720793124
+Z3 8C:/Users/HP/OneDrive/Desktop/project_Bridge/AHB_master.v
+Z4 FC:/Users/HP/OneDrive/Desktop/project_Bridge/AHB_master.v
+L0 5
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1720794693.000000
+Z7 !s107 C:/Users/HP/OneDrive/Desktop/project_Bridge/AHB_master.v|
+Z8 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/OneDrive/Desktop/project_Bridge/AHB_master.v|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+n@a@h@b_master
+vAHB_Master
+!s110 1720792106
+!i10b 1
+!s100 _;B]9_D;5LQkgRI_VdCME3
+IY5zQW:zRJe5MaHJb21[R=0
+R1
+R2
+w1720792084
+R3
+R4
+L0 5
+R5
+r1
+!s85 0
+31
+!s108 1720792106.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@a@h@b_@master
+vAHB_slave
+R0
+!i10b 1
+!s100 Cf>dmkc53g[96EUYI3B<83
+Iae^@eJizV:Ce3WA82R73j2
+R1
+R2
+Z11 w1720793122
+8C:/Users/HP/OneDrive/Desktop/project_Bridge/AHB_slave.v
+FC:/Users/HP/OneDrive/Desktop/project_Bridge/AHB_slave.v
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/HP/OneDrive/Desktop/project_Bridge/AHB_slave.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/OneDrive/Desktop/project_Bridge/AHB_slave.v|
+!i113 1
+R9
+R10
+n@a@h@b_slave
+vBridge
+!s110 1720794701
+!i10b 1
+!s100 I6incmMLHmkWoV0I7S[SD2
+I>TWlMbc8djA?aGkWM:R?W2
+R1
+R2
+Z12 w1720793123
+8C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v
+FC:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v
+L0 4
+R5
+r1
+!s85 0
+31
+!s108 1720794701.000000
+!s107 C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v|
+!i113 1
+R9
+R10
+n@bridge
+vbridge_rtl
+!s110 1720807477
+!i10b 1
+!s100 0LTBXfYeeJ6[B_F97g^@=3
+I:^eU1>WL4U6UZc4OO>NL20
+R1
+R2
+w1720807425
+8C:/Users/HP/OneDrive/Desktop/project_Bridge/bridge_rtl.v
+FC:/Users/HP/OneDrive/Desktop/project_Bridge/bridge_rtl.v
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1720807477.000000
+!s107 C:/Users/HP/OneDrive/Desktop/project_Bridge/bridge_rtl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/OneDrive/Desktop/project_Bridge/bridge_rtl.v|
+!i113 1
+R9
+R10
+vbridge_tb
+!s110 1720857726
+!i10b 1
+!s100 dmVTTG@onanG`>e8NF>@M1
+IM=6IEKgTa1>SdQGIO8W<01
+R1
+R2
+w1720842558
+8C:/Users/HP/OneDrive/Desktop/project_Bridge/bridge_tb.v
+FC:/Users/HP/OneDrive/Desktop/project_Bridge/bridge_tb.v
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1720857726.000000
+!s107 C:/Users/HP/OneDrive/Desktop/project_Bridge/bridge_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/OneDrive/Desktop/project_Bridge/bridge_tb.v|
+!i113 1
+R9
+R10
+vcontroller
+R0
+!i10b 1
+!s100 ]I1UccJI3IT66MNZN1L`i0
+ISEa^A5R2FLAM[b:iJDbSL2
+R1
+R2
+R11
+8C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v
+FC:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v|
+!i113 1
+R9
+R10
+vInterface
+R0
+!i10b 1
+!s100 6AolW0R@HL23WJb;?T1h_2
+IeGSj_3Uln6PP3aS0aDjL20
+R1
+R2
+R12
+8C:/Users/HP/OneDrive/Desktop/project_Bridge/Interface.v
+FC:/Users/HP/OneDrive/Desktop/project_Bridge/Interface.v
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/HP/OneDrive/Desktop/project_Bridge/Interface.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/HP/OneDrive/Desktop/project_Bridge/Interface.v|
+!i113 1
+R9
+R10
+n@interface
