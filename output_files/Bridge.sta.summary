@@ -1,0 +1,117 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : -10.254
+TNS   : -214.259
+
+Type  : Slow 1100mV 85C Model Setup 'Hclk'
+Slack : -2.628
+TNS   : -47.196
+
+Type  : Slow 1100mV 85C Model Hold 'Hclk'
+Slack : -3.613
+TNS   : -146.812
+
+Type  : Slow 1100mV 85C Model Hold 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : 0.750
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Hclk'
+Slack : -0.724
+TNS   : -158.503
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'controller:APBControl|PRESENT_STATE.ST_WENABLEP'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : -10.092
+TNS   : -218.068
+
+Type  : Slow 1100mV 0C Model Setup 'Hclk'
+Slack : -2.367
+TNS   : -42.637
+
+Type  : Slow 1100mV 0C Model Hold 'Hclk'
+Slack : -3.741
+TNS   : -153.959
+
+Type  : Slow 1100mV 0C Model Hold 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : 0.547
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Hclk'
+Slack : -0.724
+TNS   : -158.790
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'controller:APBControl|PRESENT_STATE.ST_WENABLEP'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : -4.536
+TNS   : -74.630
+
+Type  : Fast 1100mV 85C Model Setup 'Hclk'
+Slack : -1.684
+TNS   : -20.448
+
+Type  : Fast 1100mV 85C Model Hold 'Hclk'
+Slack : -1.535
+TNS   : -54.004
+
+Type  : Fast 1100mV 85C Model Hold 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Hclk'
+Slack : -0.088
+TNS   : -12.214
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'controller:APBControl|PRESENT_STATE.ST_WENABLEP'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : -4.024
+TNS   : -68.117
+
+Type  : Fast 1100mV 0C Model Setup 'Hclk'
+Slack : -1.248
+TNS   : -14.663
+
+Type  : Fast 1100mV 0C Model Hold 'Hclk'
+Slack : -1.511
+TNS   : -54.539
+
+Type  : Fast 1100mV 0C Model Hold 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : 0.231
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Hclk'
+Slack : -0.088
+TNS   : -12.248
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'controller:APBControl|PRESENT_STATE.ST_READ'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'controller:APBControl|PRESENT_STATE.ST_WENABLEP'
+Slack : 0.442
+TNS   : 0.000
+
+------------------------------------------------------------

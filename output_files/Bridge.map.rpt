@@ -1,0 +1,526 @@
+Analysis & Synthesis report for Bridge
+Sat Jul 13 15:56:33 2024
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Bridge|controller:APBControl|PRESENT_STATE
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: controller:APBControl
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Jul 13 15:56:33 2024       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; Bridge                                      ;
+; Top-level Entity Name           ; Bridge                                      ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 143                                         ;
+; Total pins                      ; 207                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; Bridge             ; Bridge             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
+; Bridge.v                         ; yes             ; User Verilog HDL File        ; C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v     ;         ;
+; ahb_slave.v                      ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/HP/OneDrive/Desktop/project_Bridge/ahb_slave.v  ;         ;
+; controller.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 93            ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 127           ;
+;     -- 7 input functions                    ; 0             ;
+;     -- 6 input functions                    ; 8             ;
+;     -- 5 input functions                    ; 38            ;
+;     -- 4 input functions                    ; 5             ;
+;     -- <=3 input functions                  ; 76            ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 143           ;
+;                                             ;               ;
+; I/O pins                                    ; 207           ;
+;                                             ;               ;
+; Total DSP Blocks                            ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; Hresetn~input ;
+; Maximum fan-out                             ; 144           ;
+; Total fan-out                               ; 1216          ;
+; Average fan-out                             ; 1.78          ;
++---------------------------------------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                              ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+-------------+--------------+
+; |Bridge                    ; 127 (0)             ; 143 (0)                   ; 0                 ; 0          ; 207  ; 0            ; |Bridge                       ; Bridge      ; work         ;
+;    |AHB_slave:AHBSlave|    ; 1 (1)               ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |Bridge|AHB_slave:AHBSlave    ; AHB_slave   ; work         ;
+;    |controller:APBControl| ; 126 (126)           ; 78 (78)                   ; 0                 ; 0          ; 0    ; 0            ; |Bridge|controller:APBControl ; controller  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Bridge|controller:APBControl|PRESENT_STATE                                                                                                                                                                             ;
++---------------------------+---------------------------+--------------------------+--------------------------+-------------------------+------------------------+-----------------------+------------------------+-----------------------+
+; Name                      ; PRESENT_STATE.ST_WENABLEP ; PRESENT_STATE.ST_WENABLE ; PRESENT_STATE.ST_RENABLE ; PRESENT_STATE.ST_WRITEP ; PRESENT_STATE.ST_WRITE ; PRESENT_STATE.ST_READ ; PRESENT_STATE.ST_WWAIT ; PRESENT_STATE.ST_IDLE ;
++---------------------------+---------------------------+--------------------------+--------------------------+-------------------------+------------------------+-----------------------+------------------------+-----------------------+
+; PRESENT_STATE.ST_IDLE     ; 0                         ; 0                        ; 0                        ; 0                       ; 0                      ; 0                     ; 0                      ; 0                     ;
+; PRESENT_STATE.ST_WWAIT    ; 0                         ; 0                        ; 0                        ; 0                       ; 0                      ; 0                     ; 1                      ; 1                     ;
+; PRESENT_STATE.ST_READ     ; 0                         ; 0                        ; 0                        ; 0                       ; 0                      ; 1                     ; 0                      ; 1                     ;
+; PRESENT_STATE.ST_WRITE    ; 0                         ; 0                        ; 0                        ; 0                       ; 1                      ; 0                     ; 0                      ; 1                     ;
+; PRESENT_STATE.ST_WRITEP   ; 0                         ; 0                        ; 0                        ; 1                       ; 0                      ; 0                     ; 0                      ; 1                     ;
+; PRESENT_STATE.ST_RENABLE  ; 0                         ; 0                        ; 1                        ; 0                       ; 0                      ; 0                     ; 0                      ; 1                     ;
+; PRESENT_STATE.ST_WENABLE  ; 0                         ; 1                        ; 0                        ; 0                       ; 0                      ; 0                     ; 0                      ; 1                     ;
+; PRESENT_STATE.ST_WENABLEP ; 1                         ; 0                        ; 0                        ; 0                       ; 0                      ; 0                     ; 0                      ; 1                     ;
++---------------------------+---------------------------+--------------------------+--------------------------+-------------------------+------------------------+-----------------------+------------------------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                              ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal               ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+; controller:APBControl|Pwrite_temp                   ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Pselx_temp[0]                 ; controller:APBControl|WideOr5     ; yes                    ;
+; controller:APBControl|Pselx_temp[1]                 ; controller:APBControl|WideOr5     ; yes                    ;
+; controller:APBControl|Pselx_temp[2]                 ; controller:APBControl|WideOr5     ; yes                    ;
+; controller:APBControl|Paddr_temp[0]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[1]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[2]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[3]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[4]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[5]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[6]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[7]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[8]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[9]                 ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[10]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[11]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[12]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[13]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[14]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[15]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[16]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[17]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[18]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[19]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[20]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[21]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[22]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[23]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[24]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[25]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[26]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[27]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[28]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[29]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[30]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Paddr_temp[31]                ; controller:APBControl|Selector44  ; yes                    ;
+; controller:APBControl|Pwdata_temp[0]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[1]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[2]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[3]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[4]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[5]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[6]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[7]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[8]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[9]                ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[10]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[11]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[12]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[13]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[14]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[15]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[16]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[17]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[18]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[19]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[20]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[21]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[22]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[23]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[24]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[25]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[26]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[27]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[28]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[29]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[30]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; controller:APBControl|Pwdata_temp[31]               ; controller:APBControl|Pwdata_temp ; yes                    ;
+; Number of user-specified and inferred latches = 68  ;                                   ;                        ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; controller:APBControl|PRESENT_STATE~2 ; Lost fanout        ;
+; controller:APBControl|PRESENT_STATE~3 ; Lost fanout        ;
+; controller:APBControl|PRESENT_STATE~4 ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 143   ;
+; Number of registers using Synchronous Clear  ; 138   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Bridge|controller:APBControl|Selector25 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controller:APBControl ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; ST_IDLE        ; 000   ; Unsigned Binary                           ;
+; ST_WWAIT       ; 001   ; Unsigned Binary                           ;
+; ST_READ        ; 010   ; Unsigned Binary                           ;
+; ST_WRITE       ; 011   ; Unsigned Binary                           ;
+; ST_WRITEP      ; 100   ; Unsigned Binary                           ;
+; ST_RENABLE     ; 101   ; Unsigned Binary                           ;
+; ST_WENABLE     ; 110   ; Unsigned Binary                           ;
+; ST_WENABLEP    ; 111   ; Unsigned Binary                           ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 143                         ;
+;     SCLR              ; 138                         ;
+;     plain             ; 5                           ;
+; arriav_lcell_comb     ; 128                         ;
+;     normal            ; 128                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 72                          ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 38                          ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 207                         ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.58                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Jul 13 15:56:25 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Bridge -c Bridge
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file bridge.v
+    Info (12023): Found entity 1: Bridge File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 4
+Info (12127): Elaborating entity "Bridge" for the top level hierarchy
+Warning (10136): Verilog HDL Module Declaration warning at Bridge.v(4): port "Hreadyout" already exists in the list of ports File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 4
+Warning (12125): Using design file ahb_slave.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: AHB_slave File: C:/Users/HP/OneDrive/Desktop/project_Bridge/ahb_slave.v Line: 4
+Info (12128): Elaborating entity "AHB_slave" for hierarchy "AHB_slave:AHBSlave" File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 22
+Warning (12125): Using design file controller.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: controller File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 4
+Info (12128): Elaborating entity "controller" for hierarchy "controller:APBControl" File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 24
+Warning (10240): Verilog HDL Always Construct warning at controller.v(117): inferring latch(es) for variable "Paddr_temp", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at controller.v(117): inferring latch(es) for variable "Pwrite_temp", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at controller.v(117): inferring latch(es) for variable "Pselx_temp", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at controller.v(117): inferring latch(es) for variable "Pwdata_temp", which holds its previous value in one or more paths through the always construct File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[0]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[1]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[2]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[3]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[4]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[5]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[6]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[7]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[8]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[9]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[10]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[11]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[12]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[13]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[14]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[15]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[16]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[17]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[18]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[19]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[20]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[21]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[22]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[23]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[24]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[25]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[26]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[27]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[28]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[29]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[30]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwdata_temp[31]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pselx_temp[0]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pselx_temp[1]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pselx_temp[2]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Pwrite_temp" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[0]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[1]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[2]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[3]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[4]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[5]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[6]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[7]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[8]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[9]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[10]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[11]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[12]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[13]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[14]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[15]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[16]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[17]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[18]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[19]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[20]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[21]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[22]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[23]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[24]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[25]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[26]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[27]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[28]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[29]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[30]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Info (10041): Inferred latch for "Paddr_temp[31]" at controller.v(117) File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+Warning (13012): Latch controller:APBControl|Pwrite_temp has unsafe behavior File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 112
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Hwrite File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 6
+Warning (13012): Latch controller:APBControl|Paddr_temp[28] has unsafe behavior File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Haddr[28] File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 7
+Warning (13012): Latch controller:APBControl|Paddr_temp[29] has unsafe behavior File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Haddr[29] File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 7
+Warning (13012): Latch controller:APBControl|Paddr_temp[30] has unsafe behavior File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Haddr[30] File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 7
+Warning (13012): Latch controller:APBControl|Paddr_temp[31] has unsafe behavior File: C:/Users/HP/OneDrive/Desktop/project_Bridge/controller.v Line: 117
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Haddr[31] File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 7
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Hresp[0]" is stuck at GND File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 10
+    Warning (13410): Pin "Hresp[1]" is stuck at GND File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Htrans[0]" File: C:/Users/HP/OneDrive/Desktop/project_Bridge/Bridge.v Line: 8
+Info (21057): Implemented 468 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 102 input pins
+    Info (21059): Implemented 105 output pins
+    Info (21061): Implemented 261 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Sat Jul 13 15:56:33 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
+
+
